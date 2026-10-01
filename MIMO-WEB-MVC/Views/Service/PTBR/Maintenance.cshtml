@@ -1,0 +1,127 @@
+﻿
+<!-- JUMBOTRON SECTION -->
+<div class="jumbotron p-2 m-0">
+    <div class="container text-center align-items-center">
+        <h3 class="text-warning font-weight-bold" id="heading">@ViewBag.Message</h3>
+    </div>
+    <div class="container d-flex align-items-end">
+        @Html.ActionLink("Home", "index", "home", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="Divisor1" href="#">/</a>
+        @Html.ActionLink("Service", "service", "service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="link3" href="#">/</a>
+        @Html.ActionLink("Maintenance", "maintenance", "service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+    </div>
+</div>
+<!-- END JUMBOTRON -->
+
+<div id="page-content">
+
+    <div class="row">
+        <div class="col-lg p-4 border text-justify">
+            <h5 class="text-success text-left">IMPORTANCIA DE MANUTENÇÃO</h5>
+            <p class="text-dark small">
+                Good and effective maintenance regime is crucial for operation and overall realibility of the installed measurement system. It provides confidence in the measured
+                values, and gives asssurance to owners and partners, that system is measuring correctly and within specified uncertainty limits.
+            </p>
+            <img src="~/img/Helicopter-Landing-SMALL-1.jpg" class="img-fluid mb-2" />
+            <br>
+            <div class="p-0 align-items-end">
+                @Html.ActionLink("Want to know more contact us", "Contact","Home", null, new { @class = "btn btn-info btn-lg btn-block" })
+            </div>
+        </div>
+        <div class="col-lg p-4 border text-justify">
+            <h5 class="text-success text-left">MIMO MAINTENANCE SERVICES</h5>
+            <p class="text-dark small">
+                We can provide full metering support to asset maintenance by supplying dedicated and trained metering personnel. Our technicians can provide full metering
+                support to your assets by carrying out necessary preventive and corrective maintenance routines.
+            </p>
+            <p class="text-dark small">
+                Preventive maintenance is carried out at planned schedules, whilst corrective maintenance addresses breakdowns and equipment failures, and generally
+                requires restorative work to be carried out. Easy fixes can usually be corrected quickly, and on the site. Other, more difficult cases, take more time
+                and require effective planning, and vendor support to be rectified.
+            </p>
+
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#pdata1" data-toggle="collapse" aria-expanded="false" aria-controls="pdata1">Provision of manpower</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata1" data-toggle="collapse" aria-expanded="false" aria-controls="pdata1">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg text-left" id="pdata1">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Provision of experienced and trained metering personnel to onshore or offshore facilities.
+                </p>
+            </div>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#pdata2" data-toggle="collapse" aria-expanded="false" aria-controls="pdata2">Preventive Maintenance Routines</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata2" data-toggle="collapse" aria-expanded="false" aria-controls="pdata2">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg text-left" id="pdata2">
+                <ul>
+                    <li class="text-primary small p-1 mr-2">Meter Verifications</li>
+                    <li class="text-primary small p-1 mr-2">Meter zero checks</li>
+                    <li class="text-primary small p-1 mr-2">Certification of primary meters</li>
+                    <li class="text-primary small p-1 mr-2">Certification of densitometers</li>
+                    <li class="text-primary small p-1 mr-2">Flow computer configurations checks</li>
+                    <li class="text-primary small p-1 mr-2">Management of logbooks</li>
+                </ul>
+            </div>
+
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#pdata3" data-toggle="collapse" aria-expanded="false" aria-controls="pdata3">Corrective Maintenance Routines</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata3" data-toggle="collapse" aria-expanded="false" aria-controls="pdata3">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg text-left" id="pdata3">
+                <ul>
+                    <li class="text-primary small p-1 mr-2">Equipment troubleshooting</li>
+                    <li class="text-primary small p-1 mr-2">Determine root cause</li>
+                    <li class="text-primary small p-1 mr-2">Primary instrument removal and repair</li>
+                    <li class="text-primary small p-1 mr-2">Secondary instrument removal and repair</li>
+                </ul>
+            </div>
+            <br>
+            <h5 class="text-success text-left">ACTIVITY PLANNING</h5>
+            <p class="text-dark small">
+                Scheduling of rotas, general maintenance support and contact with vendors is handled by engineering team onshore. Depending on project requirements
+                onshore engineers can be employed to take care of scheduling and planning acitivities.
+            </p>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#pdata4" data-toggle="collapse" aria-expanded="false" aria-controls="pdata4">Scheduling & Planning Tasks</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata4" data-toggle="collapse" aria-expanded="false" aria-controls="pdata4">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg text-left" id="pdata4">
+                <ul>
+                    <li class="text-primary small p-1 mr-2">Planning of technician's rotas</li>
+                    <li class="text-primary small p-1 mr-2">Planning of preventive maintenance routines</li>
+                    <li class="text-primary small p-1 mr-2">Planning of corrective maintenance routines</li>
+                    <li class="text-primary small p-1 mr-2">Planning of Shutdown work scopes</li>
+                    <li class="text-primary small p-1 mr-2">Compiling and reviewing maitenance procedures</li>
+                    <li class="text-primary small p-1 mr-2">Raising work orders and notifications</li>
+                    <li class="text-primary small p-1 mr-2">Estimation of required manpower hours</li>
+                    <li class="text-primary small p-1 mr-2">Contact with vendors</li>
+                    <li class="text-primary small p-1 mr-2">Reviewing and clearing audit items</li>
+                </ul>
+            </div>
+            <br>
+            <h5 class="text-success text-left">TURNAROUND MAINTENACE SCOPES</h5>
+            <p class="text-dark small">
+                Some maintenance work scopes may only be completed during yearly turnaround. Turnaround scopes are generally planned well in advance and require facility approval.
+                Once approval is given, relevant spare parts and equipment must be identifed and purchased. Manning requirements are then allocated, and potential Vendor
+                support identified.
+
+            </p>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata5" data-toggle="collapse" aria-expanded="false" aria-controls="pdata5">Turnaround Work Scopes</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata5" data-toggle="collapse" aria-expanded="false" aria-controls="pdata5">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg text-left" id="pdata5">
+                <ul>
+                    <li class="text-primary small p-1 mr-2">Integrated facility planning</li>
+                    <li class="text-primary small p-1 mr-2">Identification of all shutdown work scopes</li>
+                    <li class="text-primary small p-1 mr-2">Identification of material and man hours required</li>
+                    <li class="text-primary small p-1 mr-2">Vendor support requirements</li>
+                    <li class="text-primary small p-1 mr-2">detailed planning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT SECTION -->

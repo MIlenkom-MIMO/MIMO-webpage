@@ -1,0 +1,192 @@
+﻿
+<!-- JUMBOTRON SECTION -->
+<div class="jumbotron p-2 m-0">
+    <div class="container text-center align-items-center">
+        <h3 class="text-warning font-weight-bold" id="heading">@ViewBag.Message</h3>
+    </div>
+    <div class="container d-flex align-items-end">
+        @Html.ActionLink("Home", "index", "home", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="Divisor1" href="#">/</a>
+        @Html.ActionLink("Service", "service", "service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="link3" href="#">/</a>
+        @Html.ActionLink("IT Solutions", "it_Solutions", "service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+    </div>
+</div>
+<!-- END JUMBOTRON -->
+<!-- CONTENT SECTION -->
+<div id="page-content" class="text-center">
+
+    <div class="row">
+        <div class="col-lg-4 col-sm-12">
+            <div class="row border border-right-0 p-4 text-justify">
+                <img src="~/img/EXCEL ICON-RES.png" class="img-fluid mx-auto d-block" />
+            </div>
+            <div class="row border border-bottom-0 p-4 text-justify">
+                <h5 class="text-success p-2 m-auto">EXCEL SOLUTIONS</h5>
+                <p class="text-dark small">
+                    Majority of calculations are still calculated on dedicated Excel spreadsheets, which continues to be a preffered tool used by engineers across
+                    all sectors of industry.
+                </p>
+                <p class="text-dark small">
+                    This is where we can help you by developing or reviewing existing spreadsheets and implement automated solutions, that will save
+                    you time and minimise human error. This is acomplished by using full arsenal what Excel has got to offer.
+                </p>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata1" data-toggle="collapse" aria-expanded="false" aria-controls="vdata1">Advanced Excel functions</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata1" data-toggle="collapse" aria-expanded="false" aria-controls="vdata1">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata1">
+                    <p class="text-primary small pl-3 pr-3 pt-2">
+                        Regular excel and advanced funtions are used first when developing calculations. When this is not possible or isn't
+                        practical, then user defined functions can be considered.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata2" data-toggle="collapse" aria-expanded="false" aria-controls="vdata2">User Defined Functions</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata2" data-toggle="collapse" aria-expanded="false" aria-controls="vdata2">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata2">
+                    <p class="text-dark small p-2">
+                        User defined functions are developed in Visual Basic for excel. Unlike regular functions, user need to create functions from scratch, inputs are
+                        identified, solution is tested and outputs are returned. Drawback of user defined functions is they cannot be used to modify the workbook.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata3" data-toggle="collapse" aria-expanded="false" aria-controls="vdata3">Development of Macros</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata3" data-toggle="collapse" aria-expanded="false" aria-controls="vdata3">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata3">
+                    <p class="text-primary small pl-3 pr-3 pt-2" ">
+                        When user defined functions cannot be used, regular Excel subroutines can be developed to produce a solution. Subroutines are allowed to
+                        change spreadsheets. Code execution in Visual basic can be executed hunder time faster than on spreadsheets, especially if arrays are used. So
+                        implemented macro solutions can be optimised to run faster.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata4" data-toggle="collapse" aria-expanded="false" aria-controls="vdata4">Data Extractors</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata4" data-toggle="collapse" aria-expanded="false" aria-controls="vdata4">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata4">
+                    <p class="text-primary small pl-3 pr-3 pt-2" ">
+                        Data extractors extract and copy the data from other excel workbooks, text files, JSON, SQL databases or HTML pages.
+                        This is known as ETL in computing and refers to Extract, transform and load. Data extractors are employed when large amount of data
+                        needs to be extracted from other sources and consolidated in a single excel file. For example of data extractors refer to our
+                        @Html.ActionLink("calculations", "Calculations","Home", null, new { @class = "text-danger font-weight-bold" }) page.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+
+            <div class="row border border p-4 text-justify">
+                <img src="~/img/SQL ICON-RES.png" class="img-fluid mx-auto d-block" />
+            </div>
+            <div class="row border border-bottom-0 p-4 border text-justify">
+                <h5 class="text-success p-2 m-auto">SQL DATABASE SOLUTIONS</h5>
+                <p class="text-dark small">
+                    SQL server is popular database solution for storage, reporting and data analysis purposes. It can store and handle large amounts of data, and responds quickly to queries.
+                </p>
+                <p class="text-dark small">
+                    We can offer services involving database creation and migration. Perform advanced querying and data analysis, writing efficient functions and procedures
+                    , or review your database solutions and suggest improvements.
+                </p>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata5" data-toggle="collapse" aria-expanded="false" aria-controls="vdata5">Defining Databases and relationships</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata5" data-toggle="collapse" aria-expanded="false" aria-controls="vdata5">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata5">
+                    <p class="text-primary small pl-3 pr-3 pt-2">
+                        Creating SQL databases, suitable data type, tables and specifying relationships. Definition of primary and foreign keys.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata6" data-toggle="collapse" aria-expanded="false" aria-controls="vdata6">SQL queries and Data Analysis</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata6" data-toggle="collapse" aria-expanded="false" aria-controls="vdata6">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata6">
+                    <p class="text-primary small pl-3 pr-3 pt-2" ">
+                        Creation of advanced queries in SQL using vast arsenal of SQL functionality, like select, unions, joins and where statements.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata7" data-toggle="collapse" aria-expanded="false" aria-controls="vdata7">Writing SQL functions</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata7" data-toggle="collapse" aria-expanded="false" aria-controls="vdata7">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata7">
+                    <p class="text-dark small p-2">
+                        SQL function are useful for data transformation and mathematical operations carried out database values.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata8" data-toggle="collapse" aria-expanded="false" aria-controls="vdata8">Writing stored procedures</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata8" data-toggle="collapse" aria-expanded="false" aria-controls="vdata8">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata8">
+                    <p class="text-primary small pl-3 pr-3 pt-2" ">
+                        Stored procedures are developed to avoid code repetitions. Stored procedures may involve many series of SQL queries and
+                        functions combined to be executed at the same time.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+
+            <div class="row border p-4 text-justify">
+                <img src="~/img/Web Design-RES.jpg" class="img-fluid mx-auto d-block" />
+            </div>
+            <div class="row border border-bottom-0 p-4 text-justify">
+                <h5 class="text-success p-2 m-auto">WEB DATABASE SOLUTIONS</h5>
+                <p class="text-dark small">
+                    Web development is moving with light speed in the digital era, and a lot of companies are transitioning from regular software implemenations
+                    to be web based.
+                </p>
+                <p class="text-dark small">
+                    We can provide solutions to create modern and responsive web databases, built on ASP.NET framework using popular
+                    server side languages, like C# and Jquery for Client side events.
+                </p>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata9" data-toggle="collapse" aria-expanded="false" aria-controls="vdata9">Creating ASP.NET webpages</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata9" data-toggle="collapse" aria-expanded="false" aria-controls="vdata9">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata9">
+                    <p class="text-primary small pl-3 pr-3 pt-2">
+                        Page design is usually written using reusable code like bootstrap, but can also be created from scratch using HMTL and CSS styling. Creation of forms and validation
+                        techniques, modal windows, carousel, picture libraries and much more.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata10" data-toggle="collapse" aria-expanded="false" aria-controls="vdata10">CSS formatting and effects</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata10" data-toggle="collapse" aria-expanded="false" aria-controls="vdata10">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata10">
+                    <p class="text-primary small pl-3 pr-3 pt-2" ">
+                        CSS is currently the most popular tool to add styling, animation and effects to any webpage.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata11" data-toggle="collapse" aria-expanded="false" aria-controls="vdata11">Server Side Development</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata11" data-toggle="collapse" aria-expanded="false" aria-controls="vdata11">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata11">
+                    <p class="text-dark small p-2">
+                        Server side development can be done using C# or VB language, and most commonly involves interfacing to SQL server where ETL and data import operations are taking place.
+                    </p>
+                </div>
+                <div class="d-flex w-100 justify-content-between border-regular">
+                    <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata12" data-toggle="collapse" aria-expanded="false" aria-controls="vdata12">Client Side Development</a>
+                    <a class="nav-link text-primary small font-weight-bold" href="#vdata12" data-toggle="collapse" aria-expanded="false" aria-controls="vdata12">▽</a>
+                </div>
+                <div class="collapse border border-primary collapse-bg" id="vdata12">
+                    <p class="text-primary small pl-3 pr-3 pt-2" ">
+                        Java script is the best tool for client side programming, where code is executed on the fly without having to wait for response from the server.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+<!-- END CONTENT SECTION -->

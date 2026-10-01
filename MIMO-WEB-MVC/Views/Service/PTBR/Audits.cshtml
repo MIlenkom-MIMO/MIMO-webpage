@@ -1,0 +1,107 @@
+﻿
+<!-- JUMBOTRON SECTION -->
+<div class="jumbotron p-2 m-0">
+    <div class="container text-center align-items-center">
+        <h3 class="text-warning font-weight-bold" id="heading">@ViewBag.Message</h3>
+    </div>
+    <div class="container d-flex align-items-end">
+        @Html.ActionLink("Home", "index", "home",null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="Divisor1" href="#">/</a>
+        @Html.ActionLink("Service", "service","service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="link3" href="#">/</a>
+        @Html.ActionLink("Audits", "audits","service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+    </div>
+</div>
+<!-- END JUMBOTRON -->
+<!-- CONTENT SECTION -->
+<div id="page-content">
+    <div class="row">
+        <div class="col-lg p-4 border text-justify">
+            <h5 class="text-success text-left">WHY DO WE AUDIT?</h5>
+            <p class="text-dark small">
+                Metering audits are used to make sure that currently installed metering systems are fit for purpose and are measuring quantities accurately
+                and within allowable uncertainty limits. Regular auditing gives auditiee and client an assurance that currently installed metering system are operated and maintained
+                per recommended industry guidlines, and thus ensure high level of confidence into reported figures.
+            </p>
+            <h5 class="text-success text-left">MIMO AUDITING SERVICES</h5>
+            <p class="text-dark small">
+                MIMO can supply experienced metering and allocation auditors to assess the overall system health of your metering systems, depending on the region of the world
+                where metering systems are installed our auditors are equally skilled to assess metering systems against various metering guidelines.
+            </p>
+            <p class="text-dark small">
+                Outlined below are most common audit steps taken by our auditors, inluding short descriptions of the activities.
+            </p>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata1" data-toggle="collapse" aria-expanded="false" aria-controls="fdata1">Inspection of Metering Skid</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata1" data-toggle="collapse" aria-expanded="false" aria-controls="fdata1">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata1">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Visual Inspection of Measurement Skid, noting down equipment serial number,
+                    checking pipe lenghts upstream and downstream of meter, checking insulation, meter positions, presence of flow conditioners,
+                    overall state of equipment etc. Cross checking records against records, meter removals etc.
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata2" data-toggle="collapse" aria-expanded="false" aria-controls="fdata2">Inspection of Sampling system</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata2" data-toggle="collapse" aria-expanded="false" aria-controls="fdata2">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata2">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Visual Inspection of sampling skids, checking pipe dimensions upstream and downstream of sampling point,
+                    estimating fluid velocity in the pipe, witness cylinder setup and removal, check if power mixing is installed.
+                </p>
+            </div>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata3" data-toggle="collapse" aria-expanded="false" aria-controls="fdata3">Review of Maintenance Procedures</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata3" data-toggle="collapse" aria-expanded="false" aria-controls="fdata3">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata3">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Review that maintenance procedures are fit for purpose, are clear, understood by technicians and executed per defined schedules and in agreement
+                    with maintenace philosophy. Verify that certified test equipment is used and is maintained correctly. Verify maintenance history is captured and stored.
+                </p>
+            </div>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata4" data-toggle="collapse" aria-expanded="false" aria-controls="fdata4">Review of logbooks and history</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata4" data-toggle="collapse" aria-expanded="false" aria-controls="fdata4">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata4">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Review logbooks and verify that flow meter history has been captured successfully and all major events are included. This include complete information including noting
+                    down equipment serial numbers and totalisers values.
+                </p>
+            </div>
+            <div class="p-0 m-0 d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata5" data-toggle="collapse" aria-expanded="false" aria-controls="fdata5">Review of system uncertainty</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata5" data-toggle="collapse" aria-expanded="false" aria-controls="fdata5">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata5">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Review of system uncertainty and check tolerances in used are correct. Make sure the meter uncertainy has been re-calculated
+                    following major upgrades and that accurately reflects the current system state.
+                </p>
+            </div>
+            <br>
+            <p class="text-dark small">
+                The audit steps above are general and they differ from system to system. For example, if fiscal metering skids are audited that would usually include all the steps
+                above and, probably even more. Whilst in other cases client might want to focus on critial areas of the metering sysytems only, like the ones that are known to be
+                causing issues recently, or in the past.
+            </p>
+            <!-- BUTTON LINK TO CONTACT US SECTION-->
+            <br>
+            <div class="p-0 align-items-end">
+                @Html.ActionLink("Want to know more contact us", "Contact","Home", null, new { @class = "btn btn-info btn-lg btn-block" })
+            </div>
+        </div>
+        <div class="col-lg p-4 border text-justify">
+
+            <img src="~/img/RIG-MAINT3.jpg" class="img-fluid" />
+            <p class="text-dark small">Offshore Audits - Production Platform</p>
+            <img src="~/img/Audit-Refinery-RES.jpg" class="img-fluid" />
+            <p class="text-dark small">Onshore Audits - Terminals, Refineries, Tank Farms etc</p>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT SECTION -->

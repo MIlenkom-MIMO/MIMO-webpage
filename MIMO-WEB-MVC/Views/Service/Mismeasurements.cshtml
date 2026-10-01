@@ -1,0 +1,96 @@
+﻿
+<!-- JUMBOTRON SECTION -->
+<div class="jumbotron p-2 m-0">
+    <div class="container text-center align-items-center">
+        <h3 class="text-warning font-weight-bold" id="heading">@ViewBag.Message</h3>
+    </div>
+    <div class="container d-flex align-items-end">
+        @Html.ActionLink("Home", "index", "home",null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="Divisor1" href="#">/</a>
+        @Html.ActionLink("Service", "service","service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="link3" href="#">/</a>
+        @Html.ActionLink("Mismeasurements", "mismeasurements","service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+    </div>
+</div>
+<!-- END JUMBOTRON -->
+<!-- CONTENT SECTION -->
+<div id="page-content">
+    <div class="row">
+        <div class="col-lg p-4 border text-justify">
+            <h5 class="text-success text-left">WHY MIS-MEASUREMENTS HAPPEN</h5>
+            <p class="text-dark small">
+                Mis-measurements, as the name suggest refers to flow meters measuring and handing off incorrect data due to underlying issue. This can happen for
+                various reasons, most common ones which are outlined below.
+            </p>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata0" data-toggle="collapse" aria-expanded="false" aria-controls="pdata0">Common causes of Mis-measurements</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#pdata0" data-toggle="collapse" aria-expanded="false" aria-controls="pdata0">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="pdata0">
+                <ul>
+                    <li class="small text-primary p-1 mr-2">Process Issues</li>
+                    <li class="small text-primary p-1 mr-2">Errors at commissioning</li>
+                    <li class="small text-primary p-1 mr-2">Errors at meter change-outs</li>
+                    <li class="small text-primary p-1 mr-2">Incorrect flow computer configurations</li>
+                    <li class="small text-primary p-1 mr-2">Testing errors</li>
+                    <li class="small text-primary p-1 mr-2">Human errors</li>
+                    <li class="small text-primary p-1 mr-2">Breakdowns, fails and leaks</li>
+                </ul>
+            </div>
+            <br>
+            <p class="text-dark small">
+                Mis-measurement can have a big effect on the overall allocation of metered oil anf gas phases. This is especially true when there is more than one
+                owner of the field. It is, therefore important mis-measurements are addressed as soon as possible.
+            </p>
+            <h5 class="text-success text-left">MIMO MIS-MEASUREMENTS SOLUTIONS</h5>
+            <p class="text-dark small">
+                MIMO can help you with mis-measurements to reduce your workload. We can address and solve your mis-measurements in effective and transparent way,
+                where all re-calculation steps are outlined and suitably documented. We have experience working with variety of meters with different underlying causes.
+            </p>
+            <p class="text-dark small">
+                Bullets below outline common steps undertaken when solving mis-measurements.
+            </p>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata1" data-toggle="collapse" aria-expanded="false" aria-controls="fdata1">Data Collection and Review</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata1" data-toggle="collapse" aria-expanded="false" aria-controls="fdata1">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata1">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Go through meter history to find more about why mis-measurements has happen and try to determine the root cause. Speak to metering technician that has
+                    reported the mis-measurement. Collect relevant information like process trends and conditions, calibration certificates, flow computer settings, maintenance records etc.
+                </p>
+            </div>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata2" data-toggle="collapse" aria-expanded="false" aria-controls="fdata2">Determine time periods</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata2" data-toggle="collapse" aria-expanded="false" aria-controls="fdata2">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata2">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Exact time periods when mis-measurement has occured and ended needs to be established. This time period
+                    needs to be cross checks against other pending or completeted mis-measurements in that period.
+                </p>
+            </div>
+            <div class="d-flex justify-content-between border-regular">
+                <a class="nav-link text-primary small text-left font-weight-bold" href="#fdata3" data-toggle="collapse" aria-expanded="false" aria-controls="fdata3">Determine correction factor and apply</a>
+                <a class="nav-link text-primary small font-weight-bold" href="#fdata3" data-toggle="collapse" aria-expanded="false" aria-controls="fdata3">▽</a>
+            </div>
+            <div class="collapse border border-primary collapse-bg" id="fdata3">
+                <p class="text-primary small pl-3 pr-3 pt-2">
+                    Determine correction factor that would need to be applied to correct for mis-measurement effect. Describe how the correction factor has been derived.
+                    Apply the correction factor to re-caclulate original figures.
+                </p>
+            </div>
+            <!-- BUTTON LINK TO CONTACT US SECTION-->
+            <br>
+            <div class="p-0 align-items-end">
+                @Html.ActionLink("Want to know more contact us", "Contact","Home", null, new { @class = "btn btn-info btn-lg btn-block" })
+            </div>
+        </div>
+
+        <div class="col-lg p-4 border text-justify">
+
+            <img src="~/img/RIG-MM-RES.jpg" class="img-fluid" />
+        </div>
+    </div>
+</div>
+<!-- END CONTENT SECTION -->

@@ -1,0 +1,163 @@
+﻿@model MIMOWEB_ENG.Models.Candidate
+
+<script>
+
+    $("#mybtn").click(function () {
+        document.getElementById("form").reset();
+        $("#modal-window").modal();
+    });
+
+</script>
+
+<!-- MODAL WINDOW UNCERTAINTY -->
+<div class="modal fade" id="CarModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header text-center bg-success">
+                <p class="text-white font-weight-bold" id="modal-window">APPLY FOR POSITION</p>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <!-- CONTENT SECTION -->
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="row md-4 justify-content-center m-0">
+                        <div class="col-lg-4 col-sm-6 m-0">
+                            <div class="form-group m-0">
+                                @Html.TextBoxFor(m => m.Name, new { @placeholder = "Name*", @class = "form-control input-box" })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger text-left small" })
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6 m-0">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Surname*" } })
+                                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger text-left small" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row md-4 justify-content-center m-1">
+                        <div class="col-lg-4 col-sm-6 m-0">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "E-mail*" } })
+                                @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger text-left small" })
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 m-0">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Telephone*" } })
+                                @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger text-left small" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row md-4 justify-content-center m-1">
+                        <div class="col-md-8 m-0">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cover, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Cover Letter (optional)*" } })
+                                <p class="text-primary small">Fields marked with * are required</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row md-1 justify-content-center m-1">
+                        <div class="col-md-8 m-0">
+                            <div class="input-group input-box">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                           aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label text-left" for="inputGroupFile01">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row md-4 justify-content-end m-1">
+                        <div class="col-sm">
+                            <input type="submit" value="Submit" class="btn btn-success btn-lg" id="mybtn" />
+                        </div>
+                    </div>
+                    <br>
+                }
+
+                <!-- END OF CONTAINER-->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT SECTION -->
+<div id="page-content" class="text-center">
+
+
+    <br>
+    <p class="text-success font-weight-bold">MIMO Vacancies - Staff provision</p>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="text-success font-weight-bold">Currently there are no vacancies</p>
+    <br>
+
+    <!-- ROW 1-->
+    <!--<div class="row p-1">
+
+        <div class="d-flex w-100 h-25 justify-content-between border-regular">
+            <a class="nav-link text-primary small text-left font-weight-bold" href="#vdata1" data-toggle="collapse" aria-expanded="false" aria-controls="vdata1">IT Support Technician - On call</a>-->
+    @*<p class="text-primary small pl-3 pr-3 pt-2">
+            CONTRACT
+        </p>*@
+    <!--<a class="nav-link text-primary small font-weight-bold" href="#vdata1" data-toggle="collapse" aria-expanded="false" aria-controls="vdata1">CONTRACT</a>
+        <a class="nav-link text-primary small font-weight-bold" href="#vdata1" data-toggle="collapse" aria-expanded="false" aria-controls="vdata1">▽</a>
+    </div>
+    <div class="collapse border border-primary" id="vdata1">
+        <p class="text-dark small text-left pl-3 pr-3 pt-2">
+            On behalf of our client, we are looking for IT Support Technician(s) to carry out IT support and maintenance services.
+            Work will be carried on client sites on on-call basis, as and when required, typically 5 to 10 days a month. Please note this is contract position only suitable for
+            people with sp, that can take on additional work.
+        </p>
+        <p class="text-dark small text-left font-weight-bold pl-3 pr-3 pt-1 pb-0">Work Duties:</p>
+        <p class="text-dark small text-left pl-3 pr-3 pt-0">
+            Tasks are related to IT Support Services level 1 and 2, Network Support level 1 and 2 and Deskside Support Level 1 and 2.
+            <ul>
+                <li class="text-left small p-1 mr-2">Laptop and PC cloning</li>
+                <li class="text-left small p-1 mr-2">Windows installation and migration</li>
+                <li class="text-left small p-1 mr-2">Server Installation</li>
+                <li class="text-left small p-1 mr-2">Installation and mounting of routers and switches</li>
+                <li class="text-left small p-1 mr-2">Replacement of routers and Switches, Cabling, Racking.</li>
+                <li class="text-left small p-1 mr-2">Site surveys</li>
+            </ul>
+        </p>
+        <p class="text-dark small text-left font-weight-bold pl-3 pr-3 pt-1">Location:</p>
+        <p class="text-dark small text-left pl-3 pr-3 pt-2">
+            Slovenia based in Murska Sobota, local IT support for region of pomurje.
+        </p>
+        <p class="text-dark small text-left font-weight-bold pl-3 pr-3 pt-1">Renumeration:</p>
+        <p class="text-dark small text-left pl-3 pr-3 pt-2">
+            Contract 20 EUR per hour, if working less than 8 hours per day, or 100 EUR per day, if working for 8 hours.
+        </p>
+        <p class="text-dark small text-left pl-3 pr-3 pt-2">
+            To apply for the above position send you up to date CV including salary requirements and availability to
+            <a class="text-danger font-weight-bold" href="mailto:info@mimo-ms.com">info@mimo-ms.com</a>
+        </p>-->
+    @*<div class="row m-2 text-right">-->
+            <button type="button" class="btn btn-success ml-auto mr-2" id="mbt" data-toggle="modal" data-target="#CarModal">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APPLY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+        </div>*@
+    <!--</div>
+    </div>
+
+    <br>-->
+</div>
+<!-- END CONTENT SECTION -->

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIMOWEB_ENG_NEW", "MIMO-WEB-MVC\MIMOWEB_ENG_NEW.csproj", "{00016F1D-2251-4623-9783-85B3BD787C0E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC90FE40-7564-4302-9E82-9825EC690CA5} = {CC90FE40-7564-4302-9E82-9825EC690CA5}
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ContactsDatabase", "ContactsDatabase\ContactsDatabase.sqlproj", "{CC90FE40-7564-4302-9E82-9825EC690CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "ClassLib\ClassLib.csproj", "{DFFD61E5-3181-4FFD-A109-28838016EA25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00016F1D-2251-4623-9783-85B3BD787C0E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{00016F1D-2251-4623-9783-85B3BD787C0E}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{00016F1D-2251-4623-9783-85B3BD787C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00016F1D-2251-4623-9783-85B3BD787C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC90FE40-7564-4302-9E82-9825EC690CA5}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{CC90FE40-7564-4302-9E82-9825EC690CA5}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{CC90FE40-7564-4302-9E82-9825EC690CA5}.Debug|Any CPU.Deploy.0 = Release|Any CPU
+		{CC90FE40-7564-4302-9E82-9825EC690CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC90FE40-7564-4302-9E82-9825EC690CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC90FE40-7564-4302-9E82-9825EC690CA5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DFFD61E5-3181-4FFD-A109-28838016EA25}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFD61E5-3181-4FFD-A109-28838016EA25}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{DFFD61E5-3181-4FFD-A109-28838016EA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFD61E5-3181-4FFD-A109-28838016EA25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9395E42-328B-4D91-A029-48003192BB6B}
+	EndGlobalSection
+EndGlobal

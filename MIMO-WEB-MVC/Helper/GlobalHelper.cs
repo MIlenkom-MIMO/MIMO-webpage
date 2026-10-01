@@ -1,0 +1,32 @@
+﻿using System;
+using System.Web.Configuration;
+using System.Configuration;
+using System.Threading;
+
+namespace MIMOWEB_ENG.Helper
+{
+        public class GlobalHelper
+        {
+            public static string CurrentCulture
+            {
+                get
+                {
+                    return Thread.CurrentThread.CurrentUICulture.Name;
+                }
+            }
+
+            public static string DefaultCulture
+            {
+                get
+                {
+                    Configuration config = WebConfigurationManager.OpenWebConfiguration("/");
+                    GlobalizationSection section = (GlobalizationSection)config.GetSection("system.web/globalization");
+                    return section.UICulture;
+                }
+            }
+
+
+    }
+
+
+}

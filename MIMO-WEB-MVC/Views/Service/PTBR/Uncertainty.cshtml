@@ -1,0 +1,124 @@
+﻿
+<!-- JUMBOTRON SECTION -->
+<div class="jumbotron p-2 m-0">
+    <div class="container text-center align-items-center">
+        <h3 class="text-warning font-weight-bold" id="heading">@ViewBag.Message</h3>
+    </div>
+    <div class="container d-flex align-items-end">
+        @Html.ActionLink("Home", "index","home", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="Divisor1" href="#">/</a>
+        @Html.ActionLink("Service", "service","service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" id="link3" href="#">/</a>
+        @Html.ActionLink("Uncertainty", "uncertainty","service", null, new { @class = "text-primary small font-weight-bold pr-2" })
+    </div>
+</div>
+<!-- END JUMBOTRON -->
+<!-- MODAL WINDOW UNCERTAINTY -->
+<div class="modal fade" id="UncModal" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <p class="text-white font-weight-bold">SIMPLIFIED CRUDE OIL UNCERTAINTY CALCULATION</p>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="~/img/UNC-Thumbnail.jpg" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT SECTION -->
+<div id="page-content">
+    <div class="row">
+        <div class="col-lg p-4 border text-justify">
+            <h5 class="text-success text-left">MEASUREMENT UNCERTAINTY AND ITS IMPORTANCE</h5>
+            <p class="text-dark small">
+                Measurement uncertainty is an offset from the real measured value, generally expressed as a percentage. Every piece of equipment in flow measurement system has got uncertainty
+                figure associated with it, and is important to know how change or upgrade in measurement system would affect the overall uncertainty. Metering uncertainty serves as tool that
+                shows how precise and reliable flow measurement is.
+            </p>
+
+
+            <h5 class="text-success text-left">MIMO UNCERTAINTY CALCULATIONS</h5>
+            <p class="text-dark small">
+                We are offering uncertainty calculation for most common types of metering systems found in oil & Gas industry. This involves all common types of meter like orifice, coriolis and
+                ultrasonic meters. Most of the uncertainty calculations were developed on the basis of NFOGM studies.
+            </p>
+            <h5 class="text-success text-left">COMMON UNCERTAINTY ALLOWANCES</h5>
+            <p class="text-dark small">
+                Uncertainty allowances for various measurement systems will depends on its use and amount of product passing through. Tighter allowances apply to fiscal metering
+                systems, due to financial implications and change of ownership of the measured product.
+            </p>
+
+            <ul class="list-unstyled">
+                <li>
+                    <div>
+                        <div class="d-flex justify-content-between border-regular">
+                            <a class="nav-link text-primary small text-left font-weight-bold" href="#udata1" data-toggle="collapse" aria-expanded="false" aria-controls="udata1">Fiscal Gas Metering</a>
+                            <a class="nav-link text-primary small font-weight-bold" href="#udata1" data-toggle="collapse" aria-expanded="false" aria-controls="udata1">▽</a>
+                        </div>
+                        <div class="collapse border border-primary collapse-bg" id="udata1">
+                            <p class="text-info small p-2">
+                                Fiscal Gas Measurements systems are used, where change of ownership takes place. System involves high pressure gas measurements using either orifice plate or Ultrasonic
+                                meters as primary flow measuring devices. Measurement skid must as a minimum consist of two streams, one duty and standby stream. Gas density is generally measured using
+                                either Gas Densitometers or using Gas Chromatograhy. All fiscal gas metering station entire combined uncertainty must be within 1 % of standard volume.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between border-regular">
+                        <a class="nav-link text-primary small text-left font-weight-bold" href="#udata2" data-toggle="collapse" aria-expanded="false" aria-controls="udata2">Fiscal Crude Oil Metering</a>
+                        <a class="nav-link text-primary small font-weight-bold" href="#udata2" data-toggle="collapse" aria-expanded="false" aria-controls="udata2">▽</a>
+                    </div>
+                    <div class="collapse border border-primary collapse-bg" id="udata2">
+                        <p class="text-info small p-2">
+                            Fiscal Oil Metering systems are used, where chnage of ownership takes place. Liquid measurement is most commonly achieved usimg liquid turbine or ultrasomic flow meters.
+                            Liquid meter can be regularly checked against pipe provers or master meters. Oil density measurements will generally be via fast loop densitometers in dual redundancy mode.
+                            All fiscal oil metering station entire combined uncertainty must be within 0.25 % of standard volume.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between border-regular">
+                        <a class="nav-link text-primary small text-left font-weight-bold" href="#udata3" data-toggle="collapse" aria-expanded="false" aria-controls="udata3">Environmetal Metering</a>
+                        <a class="nav-link text-primary small font-weight-bold" href="#udata3" data-toggle="collapse" aria-expanded="false" aria-controls="udata3">▽</a>
+                    </div>
+                    <div class="collapse border border-primary collapse-bg" id="udata3">
+                        <p class="text-info small p-2">
+                            Environmental metering is used for measuring fluids being discharged to environment. Most common environmental measurements are measurements of fuel gas,
+                            flare gas and produced water. Uncertainty tolerances for these systems are determined on case by case basis by environmental agency, and uncertainty is specified
+                            in the environmental permit. These systems are typically using Ultrasonic or Pressure differential meters like Orifice Plate, Venturi or v-cone.
+                            Environmetal metering usually consists of one active meter, and using a fixed value for fluid density.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between border-regular">
+                        <a class="nav-link text-primary small text-left font-weight-bold" href="#udata4" data-toggle="collapse" aria-expanded="false" aria-controls="udata4">Allocation Metering</a>
+                        <a class="nav-link text-primary small font-weight-bold" href="#udata4" data-toggle="collapse" aria-expanded="false" aria-controls="udata4">▽</a>
+                    </div>
+                    <div class="collapse border border-primary collapse-bg" id="udata4">
+                        <p class="text-info small p-2">
+                            Allocation meters are used for measuring phases coming out of field(s) that are owned jointly. Since no change of ownership takes place here, this types of metering
+                            systems can have higher uncertainty allowances, typically up to 4%. It is worth noting that allocation measurements can be designed to fiscal standard, but that largely depends on cost
+                            benefit ratio.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!-- BUTTON LINK TO CONTACT US SECTION-->
+
+            <div class="p-0 align-items-end">
+                @Html.ActionLink("Want to know more contact us", "Contact","Home", null, new { @class = "btn btn-info btn-lg btn-block" })
+            </div>
+        </div>
+        <div class="col-lg p-4 border">
+            <h6 class="text-success">TYPICAL CRUDE OIL UNCERTAINTY CALCULATION - SIMPLIFIED</h6>
+            <a class="cursor-pointer" data-toggle="modal" data-target="#UncModal"><img src="~/img/Uncertainty_Schematic_05.jpg" class="img-fluid" /></a>
+
+        </div>
+    </div>
+</div>
+<!-- END CONTENT SECTION -->

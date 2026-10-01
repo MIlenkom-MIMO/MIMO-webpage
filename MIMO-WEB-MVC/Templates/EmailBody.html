@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        p {
+            color: black;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+        }
+
+        .Name {
+            color: #ffc107;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+        }
+
+        .link {
+            color: #22BCE5;
+            padding: 2;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .Row {
+            display: flex;
+            flex-direction: row;
+            margin-right: 15px;
+            margin-left: 0px;
+        }
+
+        .Col {
+            width: 10%;
+            float: left;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            You have received a new message from:<br>
+            <br />
+
+            <table style="width:50%">
+
+                <tr>
+                    <td>Name:</td>
+                    <td>{name}</td>
+                </tr>
+                <tr>
+                    <td>Surname:</td>
+                    <td>{surname}</td>
+                </tr>
+                <tr>
+                    <td>Title:</td>
+                    <td>{title}</td>
+                </tr>
+                <tr>
+                    <td>Company:</td>
+                    <td>{company}</td>
+                </tr>
+                <tr>
+                    <td>Mail:</td>
+                    <td>{e-mail}</td>
+                </tr>
+                <tr>
+                    <td>Telephone:</td>
+                    <td>{telephone}</td>
+                </tr>
+                <tr>
+                    <td>Subject:</td>
+                    <td>{subject}</td>
+                </tr>
+                <tr>
+                    <td>Message Body:</td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <div>
+                {comment}
+            </div>
+            <br>
+        </div>
+        <br>
+        <p class="Name">MIMO Metering Services LTD</p>
+        <p>Rua Raimundo Peirote Viana 411</p>
+        <p>Paracuru - CE</p>
+        <p>Brasil</p>
+        <p>Tel: +55(85)981467516</p>
+        <a class="link" href="http://www.mimo-ms.com/">www.mimo-ms.com</a><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿
+<!-- JUMBOTRON SECTION -->
+<div class="jumbotron p-2 m-0">
+    <div class="container text-center align-items-center">
+        <h3 class="text-warning font-weight-bold" id="heading">@ViewBag.Message</h3>
+    </div>
+    <div class="container d-flex align-items-end">
+        @Html.ActionLink("Home", "index", "home", null, new { @class = "text-primary small font-weight-bold pr-2" })
+        <a class="text-primary small font-weight-bold pr-2" href="#">/</a>
+        @Html.ActionLink("Projects", "projects","home", null, new { @class = "text-primary small font-weight-bold pr-2" })
+
+    </div>
+</div>
+<!-- END JUMBOTRON -->
+<!-- CONTENT SECTION -->
+<div id="page-content" class="text-center">
+
+    <br>
+    <!-- TABLE HEADING -->
+    <div class="row bg-primary border border-primary p-1">
+        <div class="col-lg-2 col-xs-12 text-left">
+            <p class="text-white font-weight-bold">
+                CLIENT
+            </p>
+        </div>
+        <div class="col-lg-2 col-xs-12 text-left">
+            <p class="text-white font-weight-bold">
+                PERIOD
+            </p>
+        </div>
+        <div class="col-lg-8 col-xs-12 text-left">
+            <p class="text-white font-weight-bold">
+                WORK DESCRIPTION
+            </p>
+        </div>
+    </div>
+    <!-- COLUMN 1-->
+    <div class="row border border-primary p-1">
+        <div class="col-lg-2 p-2 text-left">
+            <img src="~/img/TYCO-ICON-SMALL.png" class="img-responsive" />
+        </div>
+        <div class="col-lg-2 p-2 text-left">
+            <p class="p-2 text-secondary small">
+                May 2019 - Jul 2019
+            </p>
+        </div>
+        <div class="col-lg-8 p-2 text-justify">
+            <p class="p-2 text-secondary small font-weight-bold">
+                MIMO was contracted to reduce the backlog of mis-measurements for Shell UK. Work Scope involved review and re-calculation of mis-measurements.
+            </p>
+        </div>
+    </div>
+    <!-- COLUMN 2-->
+    <div class="row border border-primary p-1">
+        <div class="col-lg-2 p-2 text-left">
+            <img src="~/img/TYCO-ICON-SMALL.png" class="img-responsive" />
+        </div>
+        <div class="col-lg-2 p-2 text-left">
+            <p class="p-2 text-secondary small">
+                Jul 2019 - Jul 2020
+            </p>
+        </div>
+        <div class="col-lg-8 p-2 text-justify">
+            <p class="text-secondary small font-weight-bold">
+                MIMO was contracted to provide onshore metering support and planning for Brent Charlie asset operated by Shell UK. Work encompassed maintenance planning & scheduling, and other supporting activities as required by Shell UK.
+            </p>
+        </div>
+    </div>
+    <div class="row border border-primary p-1">
+        <div class="col-lg-2 p-2 text-left">
+            <img src="~/img/TYCO-ICON-SMALL.png" class="img-responsive" />
+        </div>
+        <div class="col-lg-2 p-2 text-left">
+            <p class="p-2 text-secondary small">
+                Sep 2022 - Apr 2023
+            </p>
+        </div>
+        <div class="col-lg-8 p-2 text-justify">
+            <p class="text-secondary small font-weight-bold">
+                MIMO was contracted to develop and build ALC Power BI report for Shell UK Central North Sea operated assets. Work encompassed building Power BI report, data validation,
+                pulling data from source databases, implementing calculations and testing.
+            </p>
+        </div>
+    </div>
+    <div class="row border border-primary p-1">
+        <div class="col-lg-2 p-2 text-left">
+            <img src="~/img/TYCO-ICON-SMALL.png" class="img-responsive" />
+        </div>
+        <div class="col-lg-2 p-2 text-left">
+            <p class="p-2 text-secondary small">
+                Apr 2023 - May 2023
+            </p>
+        </div>
+        <div class="col-lg-8 p-2 text-justify">
+            <p class="text-secondary small font-weight-bold">
+                MIMO was contracted to build Metering Maintenace Power BI report. Work encompassed building Power BI report, pulling data from source databases and testing.
+            </p>
+        </div>
+    </div>
+    <div class="row border border-primary p-1">
+        <div class="col-lg-2 p-2 text-left">
+            <img src="~/img/TYCO-ICON-SMALL.png" class="img-responsive" />
+        </div>
+        <div class="col-lg-2 p-2 text-left">
+            <p class="p-2 text-secondary small">
+                Jul 2023 - Oct 2023
+            </p>
+        </div>
+        <div class="col-lg-8 p-2 text-justify">
+            <p class="text-secondary small font-weight-bold">
+                MIMO was contracted to develop and build ALC Power BI report for Shell Southern North Sea operated assets (OneGasWest). Work encompassed building Power BI report, data validation,
+                pulling data from source databases, implementing calculations and testing.
+            </p>
+        </div>
+    </div>
+    <br>
+</div>
+<!-- END CONTENT SECTION -->
