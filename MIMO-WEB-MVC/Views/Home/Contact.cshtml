@@ -1,101 +1,277 @@
-﻿@model MIMOWEB_ENG.Models.FormDetails
+﻿@model MIMOWEB_ENG_NEW.Models.FormDetails
 
 <!-- JUMBOTRON SECTION -->
 <div class="jumbotron p-2 m-0">
     <div class="container text-center align-items-center">
         <h3 class="text-warning font-weight-bold" id="heading">@ViewBag.Message</h3>
     </div>
+
     <div class="container d-flex align-items-end">
-        @Html.ActionLink("Home", "index", "home", null, new { @class = "text-primary small font-weight-bold pr-2" })
-        <a class="text-primary small font-weight-bold pr-2" id="Divisor1" href="#">/</a>
-        @Html.ActionLink("Contact", "contact", "home", null, new { @class = "text-primary small font-weight-bold pr-2" })
-        <a class="text-primary small font-weight-bold pr-2" id="link3" href="#"></a>
+        @Html.ActionLink(
+            "Home",
+            "Index",
+            "Home",
+            null,
+            new { @class = "text-primary small font-weight-bold pr-2" }
+        )
+
+        <a class="text-primary small font-weight-bold pr-2"
+           id="Divisor1"
+           href="#">/</a>
+
+        @Html.ActionLink(
+            "Contact",
+            "Contact",
+            "Home",
+            null,
+            new { @class = "text-primary small font-weight-bold pr-2" }
+        )
+
+        <a class="text-primary small font-weight-bold pr-2"
+           id="link3"
+           href="#"></a>
     </div>
 </div>
 <!-- END JUMBOTRON -->
 
+
 <div id="page-content" class="text-center">
 
-    <br>
-    <p class="text-success font-weight-bold">If you wish to discuss your project requirement, or for any other info just drop us a note</p>
-    <br>
+    <br />
 
-    @using (Html.BeginForm())
+    <p class="text-success font-weight-bold">
+        If you wish to discuss your project requirement,
+        or for any other info just drop us a note
+    </p>
+
+    <br />
+
+
+    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
 
         <div class="row md-4 justify-content-center m-0">
+
             <div class="col-lg-4 col-sm-6 m-0">
                 <div class="form-group m-0">
-                    @Html.TextBoxFor(m => m.Name, new { @placeholder = "Name*", @class = "form-control input-box" })
-                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger text-left small" })
+
+                    <input type="text"
+                           id="Name"
+                           name="Name"
+                           value="@(Model != null ? Model.Name : "")"
+                           placeholder="Name*"
+                           class="form-control input-box"
+                           maxlength="50"
+                           required />
+
+                    @if (ViewData.ModelState["Name"] != null &&
+                         ViewData.ModelState["Name"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Name"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
                 </div>
             </div>
 
+
             <div class="col-lg-4 col-sm-6 m-0">
                 <div class="form-group">
-                    @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Surname*" } })
-                    @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger text-left small" })
+
+                    <input type="text"
+                           id="Surname"
+                           name="Surname"
+                           value="@(Model != null ? Model.Surname : "")"
+                           placeholder="Surname*"
+                           class="form-control input-box"
+                           maxlength="50"
+                           required />
+
+                    @if (ViewData.ModelState["Surname"] != null &&
+                         ViewData.ModelState["Surname"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Surname"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
                 </div>
             </div>
+
         </div>
 
-        <div class="row md-4 justify-content-center m-1">
-            <div class="col-lg-4 col-sm-6 m-0">
-                <div class="form-group">
-                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Title (Optional)" } })
-                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger text-small small" })
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 m-0">
-                <div class="form-group">
-                    @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Company (Optional)" } })
-                    @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger text-left small" })
-                </div>
-            </div>
-        </div>
 
         <div class="row md-4 justify-content-center m-1">
+
             <div class="col-lg-4 col-sm-6 m-0">
                 <div class="form-group">
-                    @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "E-mail*" } })
-                    @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger text-left small" })
+
+                    <input type="text"
+                           id="Title"
+                           name="Title"
+                           value="@(Model != null ? Model.Title : "")"
+                           placeholder="Title (Optional)"
+                           class="form-control input-box"
+                           maxlength="50" />
+
+                    @if (ViewData.ModelState["Title"] != null &&
+                         ViewData.ModelState["Title"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Title"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
                 </div>
             </div>
+
+
             <div class="col-lg-4 col-sm-6 m-0">
                 <div class="form-group">
-                    @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Telephone*" } })
-                    @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger text-left small" })
+
+                    <input type="text"
+                           id="Company"
+                           name="Company"
+                           value="@(Model != null ? Model.Company : "")"
+                           placeholder="Company (Optional)"
+                           class="form-control input-box"
+                           maxlength="50" />
+
+                    @if (ViewData.ModelState["Company"] != null &&
+                         ViewData.ModelState["Company"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Company"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
                 </div>
             </div>
+
         </div>
 
+
         <div class="row md-4 justify-content-center m-1">
+
+            <div class="col-lg-4 col-sm-6 m-0">
+                <div class="form-group">
+
+                    <input type="email"
+                           id="Mail"
+                           name="Mail"
+                           value="@(Model != null ? Model.Mail : "")"
+                           placeholder="E-mail*"
+                           class="form-control input-box"
+                           required />
+
+                    @if (ViewData.ModelState["Mail"] != null &&
+                         ViewData.ModelState["Mail"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Mail"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-sm-6 m-0">
+                <div class="form-group">
+
+                    <input type="tel"
+                           id="Telephone"
+                           name="Telephone"
+                           value="@(Model != null ? Model.Telephone : "")"
+                           placeholder="Telephone*"
+                           class="form-control input-box"
+                           required />
+
+                    @if (ViewData.ModelState["Telephone"] != null &&
+                         ViewData.ModelState["Telephone"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Telephone"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row md-4 justify-content-center m-1">
+
             <div class="col-md-8 m-0">
                 <div class="form-group">
-                    @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Message Subject*" } })
-                    @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger text=left small" })
+
+                    <input type="text"
+                           id="Subject"
+                           name="Subject"
+                           value="@(Model != null ? Model.Subject : "")"
+                           placeholder="Message Subject*"
+                           class="form-control input-box"
+                           maxlength="50"
+                           required />
+
+                    @if (ViewData.ModelState["Subject"] != null &&
+                         ViewData.ModelState["Subject"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Subject"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
                 </div>
             </div>
+
         </div>
 
+
         <div class="row md-4 justify-content-center m-1">
+
             <div class="col-md-8 m-0">
                 <div class="form-group">
-                    @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control input-box", @placeholder = "Message Body*" } })
-                    @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger text-let small" })
-                    <p class="text-primary small">Fields marked with * are required</p>
+
+                    <textarea id="Message"
+                              name="Message"
+                              placeholder="Message Body*"
+                              class="form-control input-box"
+                              rows="5"
+                              required>@(Model != null ? Model.Message : "")</textarea>
+
+                    @if (ViewData.ModelState["Message"] != null &&
+                         ViewData.ModelState["Message"].Errors.Count > 0)
+                    {
+                        <div class="text-danger text-left small">
+                            @ViewData.ModelState["Message"].Errors[0].ErrorMessage
+                        </div>
+                    }
+
+                    <p class="text-primary small">
+                        Fields marked with * are required
+                    </p>
+
                 </div>
             </div>
+
         </div>
+
 
         <div class="row md-4 justify-content-end m-1">
+
             <div class="col-sm">
-                <input type="submit" value="Submit" class="btn btn-success btn-lg" />
+                <input type="submit"
+                       value="Submit"
+                       class="btn btn-success btn-lg" />
             </div>
+
         </div>
-        <br>
+
+        <br />
     }
 
 </div>
-

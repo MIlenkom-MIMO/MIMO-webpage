@@ -17,11 +17,10 @@ using System.Net.Configuration;
 using System.IO;
 using System.Configuration;
 
-
 namespace MIMOWEB_ENG_NEW.Controllers
 {
     public class BaseController : Controller
-    { 
+    {
     }
 
     public class HomeController : BaseController
@@ -30,6 +29,7 @@ namespace MIMOWEB_ENG_NEW.Controllers
         {
             ViewBag.Message = "Measurement Solutions for Oil & Gas Industry";
             ViewBag.Title = "Measurement Solutions for Oil & Gas Industry";
+
             return View();
         }
 
@@ -41,12 +41,15 @@ namespace MIMOWEB_ENG_NEW.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Contact us";
             ViewBag.Title = "Contact us";
 
-            return View();
+            FormDetails model = new FormDetails();
+
+            return View(model);
         }
 
         public ActionResult ThankYou()
@@ -61,16 +64,21 @@ namespace MIMOWEB_ENG_NEW.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Contact(FormDetails Frm)
         {
-            if(ModelState.IsValid)
+            ViewBag.Message = "Contact us";
+            ViewBag.Title = "Contact us";
+
+            if (ModelState.IsValid)
             {
-                int RecordAdded = ClassLib.BussinessLogic.Business.FormProcessor(Frm.Name, 
+                int RecordAdded = ClassLib.BussinessLogic.Business.FormProcessor(
+                    Frm.Name,
                     Frm.Surname,
-                    Frm.Title, 
-                    Frm.Company, 
+                    Frm.Title,
+                    Frm.Company,
                     Frm.Mail,
                     Frm.Telephone,
-                    Frm.Subject, 
-                    Frm.Message);
+                    Frm.Subject,
+                    Frm.Message
+                );
 
                 if (string.IsNullOrEmpty(Frm.Title))
                 {
@@ -83,8 +91,9 @@ namespace MIMOWEB_ENG_NEW.Controllers
                 }
 
                 string body = string.Empty;
-                
-                using (StreamReader reader = new StreamReader(Server.MapPath("~/Templates/EmailBody.html")))
+
+                using (StreamReader reader =
+                    new StreamReader(Server.MapPath("~/Templates/EmailBody.html")))
                 {
                     body = reader.ReadToEnd();
                 }
@@ -98,27 +107,42 @@ namespace MIMOWEB_ENG_NEW.Controllers
                 body = body.Replace("{subject}", Frm.Subject);
                 body = body.Replace("{comment}", Frm.Message);
 
+                SmtpSection smtpSection =
+                    (SmtpSection)ConfigurationManager.GetSection(
+                        "system.net/mailSettings/smtp"
+                    );
 
-                SmtpSection smtpSection = (SmtpSection)ConfigurationManager.GetSection("system.net/mailSettings/smtp");
-                using (MailMessage mm = new MailMessage(smtpSection.From, "info@mimo-ms.com"))
+                using (MailMessage mm =
+                    new MailMessage(smtpSection.From, "info@mimo-ms.com"))
                 {
                     mm.Subject = Frm.Subject;
                     mm.Body = body;
                     mm.IsBodyHtml = true;
+
                     SmtpClient smtp = new SmtpClient();
+
                     smtp.Host = smtpSection.Network.Host;
                     smtp.EnableSsl = smtpSection.Network.EnableSsl;
-                    NetworkCredential networkCred = new NetworkCredential(smtpSection.Network.UserName, smtpSection.Network.Password);
-                    smtp.UseDefaultCredentials = smtpSection.Network.DefaultCredentials;
+
+                    NetworkCredential networkCred =
+                        new NetworkCredential(
+                            smtpSection.Network.UserName,
+                            smtpSection.Network.Password
+                        );
+
+                    smtp.UseDefaultCredentials =
+                        smtpSection.Network.DefaultCredentials;
+
                     smtp.Credentials = networkCred;
                     smtp.Port = smtpSection.Network.Port;
+
                     smtp.Send(mm);
                 }
 
                 return RedirectToAction("ThankYou");
             }
 
-            return View();
+            return View(Frm);
         }
 
         public ActionResult Calculations()
