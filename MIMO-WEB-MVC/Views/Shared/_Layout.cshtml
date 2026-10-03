@@ -1,5 +1,4 @@
-﻿@using MIMOWEB_ENG.Models
-@using System.Web
+﻿@using System.Web
 
 <!DOCTYPE html>
 <html class="h-100">
@@ -7,117 +6,348 @@
     <meta charset="utf-8" />
 
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+          crossorigin="anonymous">
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
-    <meta name="description" content="MIMO is a measurement consultancy specialising in Oil and Gas flow measurement systems maintenance, verifications and support.
-    Auditing services and provision of manpower to support your assets." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://www.mimo-ms.com/img/MIMO-FEJS-THUMB1.jpg" />
-    <meta property="og:type" content="https://www.mimo-ms.com" />
-    <meta property="og:title" content="MIMO Metering Services" />
+    <meta name="description"
+          content="MIMO is a measurement consultancy specialising in Oil and Gas flow measurement systems maintenance, verifications and support. Auditing services and provision of manpower to support your assets." />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:image"
+          content="https://www.mimo-ms.com/img/MIMO-FEJS-THUMB1.jpg" />
+
+    <meta property="og:type"
+          content="https://www.mimo-ms.com" />
+
+    <meta property="og:title"
+          content="MIMO Metering Services" />
 </head>
+
 <body class="d-flex flex-column h-100">
+
     <div class="container-fluid bg-success">
         <div class="container">
 
             <nav class="navbar navbar-expand-lg bg-success navbar-dark"
                  role="navigation">
 
-                <a class="navbar-brand" href="@Url.Action("Index", "Home", null)">
+                <a class="navbar-brand"
+                   href="@Url.Action("Index", "Home", null)">
                     <img src="~/img/LOGO MIMO V5.png" />
                 </a>
 
-                <button class="navbar-toggler text-left" type="button" data-toggle="collapse" data-target="#navcol"
+                <button class="navbar-toggler text-left"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navcol"
                         aria-controls="navcol">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
-                <div class="collapse navbar-collapse" id="navcol">
+
+                <div class="collapse navbar-collapse"
+                     id="navcol">
+
                     <ul class="navbar-nav ml-auto">
+
                         <li class="nav-item pl-md-4">
-                            @Html.ActionLink("About", "index", "home", null, new { @class = "nav-link" })
+                            @Html.ActionLink(
+                                "About",
+                                "index",
+                                "home",
+                                null,
+                                new { @class = "nav-link" }
+                            )
                         </li>
-                        <!-- Dropdown -->
+
                         <li class="nav-item dropdown pl-md-4">
-                            <a class="nav-link dropdown-toggle" href="service" id="navbardrop" data-toggle="dropdown">
+
+                            <a class="nav-link dropdown-toggle"
+                               href="service"
+                               id="navbardrop"
+                               data-toggle="dropdown">
                                 Services
                             </a>
+
                             <div class="dropdown-menu bg-success">
-                                @Html.ActionLink("Maintenance", "maintenance", "service", null, new { @class = "dropdown-item" })
-                                @Html.ActionLink("Verification", "verification", "service", null, new { @class = "dropdown-item" })
-                                @Html.ActionLink("Audits", "audits", "service", null, new { @class = "dropdown-item" })
-                                @Html.ActionLink("Uncertainty", "uncertainty", "service", null, new { @class = "dropdown-item" })
-                                @Html.ActionLink("Mismeasurements", "mismeasurements", "service", null, new { @class = "dropdown-item" })
-                                @Html.ActionLink("IT Solutions", "it_solutions", "service", null, new { @class = "dropdown-item" })
+
+                                @Html.ActionLink(
+                                    "Maintenance",
+                                    "maintenance",
+                                    "service",
+                                    null,
+                                    new { @class = "dropdown-item" }
+                                )
+
+                                @Html.ActionLink(
+                                    "Verification",
+                                    "verification",
+                                    "service",
+                                    null,
+                                    new { @class = "dropdown-item" }
+                                )
+
+                                @Html.ActionLink(
+                                    "Audits",
+                                    "audits",
+                                    "service",
+                                    null,
+                                    new { @class = "dropdown-item" }
+                                )
+
+                                @Html.ActionLink(
+                                    "Uncertainty",
+                                    "uncertainty",
+                                    "service",
+                                    null,
+                                    new { @class = "dropdown-item" }
+                                )
+
+                                @Html.ActionLink(
+                                    "Mismeasurements",
+                                    "mismeasurements",
+                                    "service",
+                                    null,
+                                    new { @class = "dropdown-item" }
+                                )
+
+                                @Html.ActionLink(
+                                    "IT Solutions",
+                                    "it_solutions",
+                                    "service",
+                                    null,
+                                    new { @class = "dropdown-item" }
+                                )
+
                             </div>
+
                         </li>
+
                         <li class="nav-item pl-md-4">
-                            @Html.ActionLink("Calculations", "calculations", "home", null, new { @class = "nav-link" })
+                            @Html.ActionLink(
+                                "Calculations",
+                                "calculations",
+                                "home",
+                                null,
+                                new { @class = "nav-link" }
+                            )
                         </li>
+
                         <li class="nav-item pl-md-4">
-                            @Html.ActionLink("Vacancies", "vacancies", "home", null, new { @class = "nav-link" })
+                            @Html.ActionLink(
+                                "Vacancies",
+                                "vacancies",
+                                "home",
+                                null,
+                                new { @class = "nav-link" }
+                            )
                         </li>
+
                         <li class="nav-item pl-md-4">
-                            @Html.ActionLink("Projects", "projects", "home", null, new { @class = "nav-link" })
+                            @Html.ActionLink(
+                                "Projects",
+                                "projects",
+                                "home",
+                                null,
+                                new { @class = "nav-link" }
+                            )
                         </li>
+
                         <li class="nav-item pl-md-4">
-                            @Html.ActionLink("Contact", "contact", "home", null, new { @class = "nav-link" })
+                            @Html.ActionLink(
+                                "Contact",
+                                "contact",
+                                "home",
+                                null,
+                                new { @class = "nav-link" }
+                            )
                         </li>
+
                     </ul>
+
                 </div>
+
             </nav>
+
         </div>
     </div>
 
+
     @RenderBody()
+
 
     <footer class="footer bg-success small">
 
-        <!-- Footer Links -->
         <div class="container">
+
             <div class="row">
+
                 <div class="col-lg-4 p-4 text-left flex-column">
-                    <div class="border-footer align middle w-55 mb-2"><h6 class="text-uppercase text-white">Where to find us</h6></div>
-                    <div><p class="text-white font-italic font-weight-bold"><i class="fas fa-home text-warning pr-4" aria-hidden="true"></i>MIMO Metering Services Ltd</p></div>
-                    <div><p class="text-white"><i class="fa fa-map-marker text-warning pr-4" aria-hidden="true"></i>18 North Silver Street, Aberdeen AB10 1JU</p></div>
-                    <div><a class="text-white" href="mailto:info@mimo-ms.com"><i class="fas fa-envelope text-warning font-weight-bold pr-4" aria-hidden="true"></i>mail MIMO</a></div><br>
-                    <div><a href="callto://+5585981467516" class="text-white"><i class="fas fa-phone text-warning pr-4"></i>+447765793305</a></div>
-                </div>
-                <div class="col-lg-4 p-4 text-center">
-                    <div class="border-footer align middle w-55 mb-2"><h6 class="text-uppercase text-white">About MIMO</h6></div>
-                    <div class="text-justify">
-                        <p class="text-white">
-                            We are measurement consultancy specialising in oil & gas flow measurements maintenance, verifications and support.
-                            We perform audits and provide manpower to support your assets. We are also developing database solutions for Oil & Gas industry.
-                        </p>
-                        <p class="text-white">
-                            Work hours, Mon-Fri 08:00 - 16:00.
+
+                    <div class="border-footer align middle w-55 mb-2">
+                        <h6 class="text-uppercase text-white">
+                            Where to find us
+                        </h6>
+                    </div>
+
+                    <div>
+                        <p class="text-white font-italic font-weight-bold">
+                            <i class="fas fa-home text-warning pr-4"
+                               aria-hidden="true"></i>
+                            MIMO Metering Services Ltd
                         </p>
                     </div>
 
+                    <div>
+                        <p class="text-white">
+                            <i class="fa fa-map-marker text-warning pr-4"
+                               aria-hidden="true"></i>
+                            18 North Silver Street, Aberdeen AB10 1JU
+                        </p>
+                    </div>
+
+                    <div>
+                        <a class="text-white"
+                           href="mailto:info@mimo-ms.com">
+                            <i class="fas fa-envelope text-warning font-weight-bold pr-4"
+                               aria-hidden="true"></i>
+                            mail MIMO
+                        </a>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <a href="callto://+5585981467516"
+                           class="text-white">
+                            <i class="fas fa-phone text-warning pr-4"></i>
+                            +447765793305
+                        </a>
+                    </div>
+
                 </div>
+
+
+                <div class="col-lg-4 p-4 text-center">
+
+                    <div class="border-footer align middle w-55 mb-2">
+                        <h6 class="text-uppercase text-white">
+                            About MIMO
+                        </h6>
+                    </div>
+
+                    <div class="text-justify">
+
+                        <p class="text-white">
+                            We are measurement consultancy specialising in oil &amp; gas flow measurements maintenance,
+                            verifications and support. We perform audits and provide manpower to support your assets.
+                            We are also developing database solutions for Oil &amp; Gas industry.
+                        </p>
+
+                        <p class="text-white">
+                            Work hours, Mon-Fri 08:00 - 16:00.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
                 <div class="col-lg-4 p-4 d-flex flex-column justify-content-center">
-                    <div class="p-0 border-footer text-center"><h6 class="text-uppercase text-white">Quick links</h6></div>
+
+                    <div class="p-0 border-footer text-center">
+                        <h6 class="text-uppercase text-white">
+                            Quick links
+                        </h6>
+                    </div>
+
                     <ul class="list-unstyled p-0 m-0 text-center">
-                        <li class="p-0 m-0">@Html.ActionLink("Maintenance", "maintenance", "service", null, new { @class = "dropdown-item" })</li>
-                        <li class="p-0 m-0">@Html.ActionLink("Verification", "verification", "service", null, new { @class = "dropdown-item" })</li>
-                        <li class="p-0 m-0">@Html.ActionLink("Audits", "audits", "service", null, new { @class = "dropdown-item" })</li>
-                        <li class="p-0 m-0">@Html.ActionLink("Uncertainty", "uncertainty", "service", null, new { @class = "dropdown-item" })</li>
-                        <li class="p-0 m-0">@Html.ActionLink("Mismeasurements", "mismeasurements", "service", null, new { @class = "dropdown-item" })</li>
-                        <li class="p-0 m-0">@Html.ActionLink("IT Solutions", "it_solutions", "service", null, new { @class = "dropdown-item" })  </li>
+
+                        <li class="p-0 m-0">
+                            @Html.ActionLink(
+                                "Maintenance",
+                                "maintenance",
+                                "service",
+                                null,
+                                new { @class = "dropdown-item" }
+                            )
+                        </li>
+
+                        <li class="p-0 m-0">
+                            @Html.ActionLink(
+                                "Verification",
+                                "verification",
+                                "service",
+                                null,
+                                new { @class = "dropdown-item" }
+                            )
+                        </li>
+
+                        <li class="p-0 m-0">
+                            @Html.ActionLink(
+                                "Audits",
+                                "audits",
+                                "service",
+                                null,
+                                new { @class = "dropdown-item" }
+                            )
+                        </li>
+
+                        <li class="p-0 m-0">
+                            @Html.ActionLink(
+                                "Uncertainty",
+                                "uncertainty",
+                                "service",
+                                null,
+                                new { @class = "dropdown-item" }
+                            )
+                        </li>
+
+                        <li class="p-0 m-0">
+                            @Html.ActionLink(
+                                "Mismeasurements",
+                                "mismeasurements",
+                                "service",
+                                null,
+                                new { @class = "dropdown-item" }
+                            )
+                        </li>
+
+                        <li class="p-0 m-0">
+                            @Html.ActionLink(
+                                "IT Solutions",
+                                "it_solutions",
+                                "service",
+                                null,
+                                new { @class = "dropdown-item" }
+                            )
+                        </li>
+
                     </ul>
 
                 </div>
+
             </div>
+
         </div>
+
     </footer>
+
     <!-- END FOOTER SECTION -->
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/mvcfoolproof")
+
     @RenderSection("scripts", required: false)
 
 </body>

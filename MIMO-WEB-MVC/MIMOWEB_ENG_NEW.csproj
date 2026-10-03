@@ -207,6 +207,8 @@
     <Content Include="Modules\workbook 8 - Speed of Sound - AGA10 - F1.xlsm" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\milenkom-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\milenkom-001-site1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mimo-ms.com - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mimo-ms.com - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\mimo-ms.com - Web Deploy2.pubxml" />
